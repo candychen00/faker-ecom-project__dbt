@@ -4,9 +4,9 @@ RUN pip install dbt-bigquery
 
 COPY . /my_dbt
 
-WORKDIR /my_dbt
+WORKDIR /my_dbt_project
 
-ENV DBT_PROFILES_DIR=/my_dbt
+ENV DBT_PROFILES_DIR=/my_dbt_project
 
 
 
