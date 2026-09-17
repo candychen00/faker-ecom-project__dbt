@@ -16,6 +16,6 @@ test_folder/
 
 # dbt
 logs/
-my_dbt_project/target/
+target/
 dbt_packages/
 .user.yml

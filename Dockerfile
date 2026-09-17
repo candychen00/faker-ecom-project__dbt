@@ -6,6 +6,8 @@ COPY . /my_dbt
 
 WORKDIR /my_dbt
 
+ENV DBT_PROFILES_DIR=/my_dbt
+
 
 
 
