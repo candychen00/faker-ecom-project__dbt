@@ -1,0 +1,12 @@
+sources:
+  - name: faker
+    database: 'project-97ea2755-962c-466f-b6c'
+    schema: 'airflow_dbt_faker_ecom_raw'
+
+    tables:
+      - name: customers # alias
+        identifier: raw_customers # actual table name in bq
+      - name: products
+        identifier: raw_products
+      - name: orders
+        identifier: raw_orders
