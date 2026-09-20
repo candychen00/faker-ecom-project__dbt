@@ -6,6 +6,24 @@ sources:
     tables:
       - name: customers # alias
         identifier: raw_customers # actual table name in bq
+        columns:
+          - name: name
+            data_tests:
+              - not_null
+          - name: email
+            data_tests:
+              - not_null
+          - name: state
+            data_tests:
+              - not_null
+          - name: customer_id
+            data_tests:
+              - not_null 
+              - unique  
+          - name: signup_date
+            data_tests:
+              - not_null
+
       - name: products
         identifier: raw_products
       - name: orders
