@@ -26,5 +26,27 @@ sources:
 
       - name: products
         identifier: raw_products
+        columns:
+          - name: price
+            data_tests:
+            - not_null
+          - name: category
+            data_tests:
+            - not_null
+            - accepted_values:
+                arguments:
+                  values: ['Juice', 'Jam', 'Dried Snacks', 'Smoothie', 'Gummies']
+          - name: product_id
+            data_tests:
+            - not_null
+            - unique
+          - name: fruit
+            data_tests:
+            - not_null
+            - accepted_values:
+                arguments:
+                  values: ['Apple', 'Banana', 'Orange', 'Strawberry', 'Mango', 'Blueberry', 'Peach', 'Pineapple']
+
+ 
       - name: orders
         identifier: raw_orders

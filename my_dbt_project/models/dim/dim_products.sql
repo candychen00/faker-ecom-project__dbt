@@ -10,7 +10,7 @@ SELECT
     product_name,
     product_price,
     product_category,
-    SPLIT( product_name, ' ')[OFFSET(0)] AS fruit_name,
+    product_fruit
 
 FROM src_products
 ORDER BY product_id

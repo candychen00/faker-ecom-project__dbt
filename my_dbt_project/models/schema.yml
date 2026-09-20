@@ -29,3 +29,8 @@ models:
         data_tests:
           - not_null
 
+
+  # - name: dim_products
+  #   columns:
+  #     - name: 
+
