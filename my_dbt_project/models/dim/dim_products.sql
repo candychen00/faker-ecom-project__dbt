@@ -7,10 +7,11 @@ WITH src_products AS (
 
 SELECT
     product_id,
-    product_name,
+    CONCAT( product_fruit, " ", product_category) as product_name,
     product_price,
-    product_category,
-    product_fruit
+    product_fruit,
+    product_category
+    
 
 FROM src_products
 ORDER BY product_id

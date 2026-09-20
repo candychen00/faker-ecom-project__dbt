@@ -7,7 +7,6 @@ select
     product_id,
     price as product_price,
     category as product_category,
-    fruit as product_fruit,
-    CONCAT(fruit, category) as product_name
+    fruit as product_fruit
 
 from raw_products
