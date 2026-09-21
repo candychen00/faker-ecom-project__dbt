@@ -12,6 +12,7 @@ with src_orders as (
 
 select
     ord.*,
+    ord.order_quantity * prod.product_price as order_amount,
 
     product_name,
     product_price,
