@@ -5,8 +5,8 @@ my_dbt_project:
     dev:
       type: bigquery
       method: oauth
-      # method: service-account
-      # keyfile: ../secret/gcp-key.json           # Absolute path to your downloaded JSON key
+      #method: service-account
+      #keyfile: ../secret/gcp-key.json           # Absolute path to your downloaded JSON key
       project: "{{ env_var('GCP_PROJECT_ID') }}"      # The GCP project where BigQuery running
       dataset: "airflow_dbt_faker_ecom"      # The default dataset dbt will build models in
       threads: 1                         # Number of concurrent queries
