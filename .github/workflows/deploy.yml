@@ -79,10 +79,12 @@ jobs:
 
       - name: Install dbt packages (Optional)
         run: |
+          cd my_dbt_project
           dbt deps
 
       - name: Generate dbt Docs
         run: |
+          cd my_dbt_project
           dbt docs generate
 
 
@@ -93,7 +95,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'target' # dbt docs generate 會將產物放在 target/ 目錄
+          path: 'my_dbt_project/target' # dbt docs generate 會將產物放在 target/ 目錄
 
 
       - name: Deploy to GitHub Pages
