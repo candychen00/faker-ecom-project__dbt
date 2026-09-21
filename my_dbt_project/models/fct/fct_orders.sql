@@ -12,17 +12,18 @@ with src_orders as (
 
 select
     ord.*,
-    prod.product_price * ord.order_quantity as order_amount,
 
-    prod.product_name,
-    prod.product_category,
-    prod.product_price,
-    prod.fruit_name,
+    product_name,
+    product_price,
+    product_fruit,
+    product_category,
 
-    cust.first_name,
-    cust.last_name,
-    cust.customer_state,
-    cust.customer_signup_date
+    full_name_cleaned,
+    first_name,
+    last_name,
+    customer_email,
+    customer_state,
+    customer_signup_date
 
 
 from src_orders ord
