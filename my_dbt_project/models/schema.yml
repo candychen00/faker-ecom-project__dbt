@@ -15,6 +15,7 @@ models:
           - dbt_expectations.expect_column_values_to_match_regex:
               arguments:
                 regex: '^[A-Z][a-z]+\\s[A-Z][a-z]+$'
+
       - name: first_name
         data_tests:
           - not_null 
