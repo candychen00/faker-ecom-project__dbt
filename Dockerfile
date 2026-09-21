@@ -8,6 +8,8 @@ WORKDIR /my_dbt/my_dbt_project
 
 ENV DBT_PROFILES_DIR=/my_dbt/my_dbt_project
 
+RUN dbt deps
+
 
 
 
