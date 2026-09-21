@@ -83,6 +83,8 @@ jobs:
           dbt deps
 
       - name: Generate dbt Docs
+        env:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
         run: |
           cd my_dbt_project
           dbt docs generate
